@@ -11,6 +11,11 @@
 		FE105D5425479C1300BA1991 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE105D5325479C1300BA1991 /* LandingView.swift */; };
 		FE105D5625479C1500BA1991 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE105D5525479C1500BA1991 /* Assets.xcassets */; };
 		FE105D5925479C1500BA1991 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE105D5825479C1500BA1991 /* Preview Assets.xcassets */; };
+		FE2397442547BE65003368CB /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2397432547BE65003368CB /* CreateView.swift */; };
+		FE2397472547CCFF003368CB /* DropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2397462547CCFF003368CB /* DropdownView.swift */; };
+		FE23974B2547D369003368CB /* RemindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23974A2547D369003368CB /* RemindView.swift */; };
+		FE2397502547D9BB003368CB /* CreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE23974F2547D9BB003368CB /* CreateViewModel.swift */; };
+		FE2397542547DA88003368CB /* DropdownItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2397532547DA88003368CB /* DropdownItemProtocol.swift */; };
 		FE26A4A72547A0D7007A8954 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A4A62547A0D7007A8954 /* PrimaryButtonStyle.swift */; };
 		FE26A4AA2547A254007A8954 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A4A92547A254007A8954 /* Color+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -22,6 +27,11 @@
 		FE105D5525479C1500BA1991 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE105D5825479C1500BA1991 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FE105D5A25479C1500BA1991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE2397432547BE65003368CB /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		FE2397462547CCFF003368CB /* DropdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownView.swift; sourceTree = "<group>"; };
+		FE23974A2547D369003368CB /* RemindView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindView.swift; sourceTree = "<group>"; };
+		FE23974F2547D9BB003368CB /* CreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewModel.swift; sourceTree = "<group>"; };
+		FE2397532547DA88003368CB /* DropdownItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownItemProtocol.swift; sourceTree = "<group>"; };
 		FE26A4A62547A0D7007A8954 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		FE26A4A92547A254007A8954 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,10 +66,13 @@
 		FE105D5025479C1300BA1991 /* Fitness */ = {
 			isa = PBXGroup;
 			children = (
+				FE23974E2547D9AA003368CB /* ViewModels */,
 				FE105D5A25479C1500BA1991 /* Info.plist */,
 				FE105D5525479C1500BA1991 /* Assets.xcassets */,
 				FE105D5125479C1300BA1991 /* FitnessApp.swift */,
 				FE105D5325479C1300BA1991 /* LandingView.swift */,
+				FE2397432547BE65003368CB /* CreateView.swift */,
+				FE23974A2547D369003368CB /* RemindView.swift */,
 				FE26A4AD2547A8B8007A8954 /* Extensions */,
 				FE26A4AC2547A8AD007A8954 /* Components */,
 				FE105D5725479C1500BA1991 /* Preview Content */,
@@ -75,9 +88,19 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		FE23974E2547D9AA003368CB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FE23974F2547D9BB003368CB /* CreateViewModel.swift */,
+				FE2397532547DA88003368CB /* DropdownItemProtocol.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		FE26A4AC2547A8AD007A8954 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FE2397462547CCFF003368CB /* DropdownView.swift */,
 				FE26A4A62547A0D7007A8954 /* PrimaryButtonStyle.swift */,
 			);
 			path = Components;
@@ -160,10 +183,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE2397502547D9BB003368CB /* CreateViewModel.swift in Sources */,
 				FE26A4A72547A0D7007A8954 /* PrimaryButtonStyle.swift in Sources */,
 				FE105D5425479C1300BA1991 /* LandingView.swift in Sources */,
+				FE2397542547DA88003368CB /* DropdownItemProtocol.swift in Sources */,
 				FE105D5225479C1300BA1991 /* FitnessApp.swift in Sources */,
 				FE26A4AA2547A254007A8954 /* Color+Extension.swift in Sources */,
+				FE23974B2547D369003368CB /* RemindView.swift in Sources */,
+				FE2397442547BE65003368CB /* CreateView.swift in Sources */,
+				FE2397472547CCFF003368CB /* DropdownView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
