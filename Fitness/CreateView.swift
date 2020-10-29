@@ -10,14 +10,18 @@ import SwiftUI
 struct CreateView: View {
     
     @State private var isActive = false
+    @StateObject private var viewModel = CreateViewModel()
+    
+    var dropDownList: some View {
+        ForEach(viewModel.dropdowns.indices, id: \.self) { index in
+            DropdownView(viewModel: $viewModel.dropdowns[index])
+        }
+    }
     
     var body: some View {
         ScrollView {
             VStack {
-                DropdownView()
-                DropdownView()
-                DropdownView()
-                DropdownView()
+                dropDownList
                 
                 Spacer()
                 NavigationLink(
