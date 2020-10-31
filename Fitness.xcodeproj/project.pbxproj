@@ -23,6 +23,7 @@
 		FEA23924254D06D500501AAA /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA23923254D06D500501AAA /* Challenge.swift */; };
 		FEA23928254D095200501AAA /* ChallengeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA23927254D095200501AAA /* ChallengeService.swift */; };
 		FEA2392C254D351400501AAA /* FitnessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA2392B254D351400501AAA /* FitnessError.swift */; };
+		FEA23930254DCBB200501AAA /* AuthPublishers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA2392F254DCBB200501AAA /* AuthPublishers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		FEA23923254D06D500501AAA /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		FEA23927254D095200501AAA /* ChallengeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeService.swift; sourceTree = "<group>"; };
 		FEA2392B254D351400501AAA /* FitnessError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessError.swift; sourceTree = "<group>"; };
+		FEA2392F254DCBB200501AAA /* AuthPublishers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPublishers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 		FEA2392E254DCB7300501AAA /* Publishers */ = {
 			isa = PBXGroup;
 			children = (
+				FEA2392F254DCBB200501AAA /* AuthPublishers.swift */,
 			);
 			path = Publishers;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA23930254DCBB200501AAA /* AuthPublishers.swift in Sources */,
 				FE2397502547D9BB003368CB /* CreateChallengeViewModel.swift in Sources */,
 				FE26A4A72547A0D7007A8954 /* PrimaryButtonStyle.swift in Sources */,
 				FE919162254CF6BF00BCC176 /* UserServices.swift in Sources */,
