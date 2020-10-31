@@ -22,6 +22,7 @@
 		FE919162254CF6BF00BCC176 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE919161254CF6BF00BCC176 /* UserServices.swift */; };
 		FEA23924254D06D500501AAA /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA23923254D06D500501AAA /* Challenge.swift */; };
 		FEA23928254D095200501AAA /* ChallengeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA23927254D095200501AAA /* ChallengeService.swift */; };
+		FEA2392C254D351400501AAA /* FitnessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA2392B254D351400501AAA /* FitnessError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		FE919161254CF6BF00BCC176 /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
 		FEA23923254D06D500501AAA /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		FEA23927254D095200501AAA /* ChallengeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeService.swift; sourceTree = "<group>"; };
+		FEA2392B254D351400501AAA /* FitnessError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		FE105D5025479C1300BA1991 /* Fitness */ = {
 			isa = PBXGroup;
 			children = (
+				FEA2392E254DCB7300501AAA /* Publishers */,
 				FE919160254CF6AF00BCC176 /* Services */,
 				FE919165254D041900BCC176 /* Models */,
 				FE23974E2547D9AA003368CB /* ViewModels */,
@@ -104,6 +107,7 @@
 				FE105D5A25479C1500BA1991 /* Info.plist */,
 				FE82A020254CEF4B00DEC45E /* GoogleService-Info.plist */,
 				FE105D5525479C1500BA1991 /* Assets.xcassets */,
+				FEA2392A254D34FF00501AAA /* Errors */,
 				FE26A4AD2547A8B8007A8954 /* Extensions */,
 				FE26A4AC2547A8AD007A8954 /* Components */,
 				FE105D5725479C1500BA1991 /* Preview Content */,
@@ -169,6 +173,21 @@
 				FE2397432547BE65003368CB /* CreateView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FEA2392A254D34FF00501AAA /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				FEA2392B254D351400501AAA /* FitnessError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		FEA2392E254DCB7300501AAA /* Publishers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Publishers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +315,7 @@
 				FEA23928254D095200501AAA /* ChallengeService.swift in Sources */,
 				FE2397472547CCFF003368CB /* DropdownView.swift in Sources */,
 				FEA23924254D06D500501AAA /* Challenge.swift in Sources */,
+				FEA2392C254D351400501AAA /* FitnessError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

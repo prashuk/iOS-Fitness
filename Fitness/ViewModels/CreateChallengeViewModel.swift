@@ -18,6 +18,9 @@ final class CreateChallengeViewModel: ObservableObject {
     @Published var startAmountDropdown = ChallengePartViewModel(type: .startAmount)
     @Published var lengthDropdown = ChallengePartViewModel(type: .length)
     
+    @Published var error: FitnessError?
+    @Published var isLoading = false
+    
     private let userService: UserServiceProtocol
     private let challengeService: ChallengeServiceProtocol
     private var cancellables: [AnyCancellable] = []
@@ -34,12 +37,14 @@ final class CreateChallengeViewModel: ObservableObject {
     func send(action: Action) {
         switch action {
         case .createChallenge:
-            currentUserId().flatMap { userId -> AnyPublisher<Void, Error> in
+            isLoading = true
+            currentUserId().flatMap { userId -> AnyPublisher<Void, FitnessError> in
                 return self.createChallenge(userId: userId)
             }.sink { completion in
+                self.isLoading = false
                 switch completion {
                 case let .failure(error):
-                    print(error.localizedDescription)
+                    self.error = error
                 case .finished:
                     print("finished")
                 }
@@ -49,12 +54,12 @@ final class CreateChallengeViewModel: ObservableObject {
         }
     }
     
-    private func createChallenge(userId: UserId) -> AnyPublisher<Void, Error> {
+    private func createChallenge(userId: UserId) -> AnyPublisher<Void, FitnessError> {
         guard let excercise = excerciseDropdown.text,
               let startAmount = startAmountDropdown.number,
               let increase = increaseDropdown.number,
               let length = lengthDropdown.number else {
-            return Fail(error: NSError()).eraseToAnyPublisher()
+            return Fail(error: .default(description: "Parsing error")).eraseToAnyPublisher()
         }
         
         let challenge = Challenge(
@@ -69,11 +74,11 @@ final class CreateChallengeViewModel: ObservableObject {
         return challengeService.create(challenge).eraseToAnyPublisher()
     }
     
-    private func currentUserId() -> AnyPublisher<UserId, Error> {
-        return self.userService.currentUser().flatMap { user -> AnyPublisher<UserId, Error> in
+    private func currentUserId() -> AnyPublisher<UserId, FitnessError> {
+        return self.userService.currentUser().flatMap { user -> AnyPublisher<UserId, FitnessError> in
             if let userId = user?.uid {
                 return Just(userId)
-                    .setFailureType(to: Error.self)
+                    .setFailureType(to: FitnessError.self)
                     .eraseToAnyPublisher()
             } else {
                 return self.userService
