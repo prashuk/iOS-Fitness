@@ -6,9 +6,86 @@
 //
 
 import SwiftUI
+import Combine
+
+typealias UserId = String
 
 final class CreateViewModel: ObservableObject {
     @Published var dropdowns: [ChallengeViewModel] = [.init(type: .excercise), .init(type: .startAmount), .init(type: .increase), .init(type: .length)]
+    
+    private let userService: UserServiceProtocol
+    private var cancellables: [AnyCancellable] = []
+    
+    enum Action {
+        case selectOption(index: Int)
+        case createChallenge
+    }
+    
+    var hasSelectedDropdown: Bool {
+        selectedDropdownIndex != nil
+    }
+    
+    var selectedDropdownIndex: Int? {
+        (dropdowns.enumerated().first(where: { $0.element.isSelected })?.offset)
+    }
+    
+    var displayedOptions: [DropdownOption] {
+        guard let selectedDropdownIndex = selectedDropdownIndex else { return [] }
+        return dropdowns[selectedDropdownIndex].options
+    }
+    
+    init(userService: UserServiceProtocol = UserService()) {
+        self.userService = userService
+    }
+    
+    func send(action: Action) {
+        switch action {
+        case let .selectOption(index: index):
+            guard let selectedDropdownIndex = selectedDropdownIndex else { return }
+            clearSelectedOption()
+            dropdowns[selectedDropdownIndex].options[index].isSelected = true
+            clearSelectedDropdown()
+            
+        case .createChallenge:
+            currentUserId().sink { completion in
+                switch completion {
+                case let .failure(error):
+                    print(error.localizedDescription)
+                case .finished:
+                    print("Completed")
+                }
+            } receiveValue: { (userId) in
+                print("Retrieve User Id = \(userId)")
+            }.store(in: &cancellables)
+        }
+    }
+    
+    func clearSelectedOption() {
+        guard let selectedDropdownIndex = selectedDropdownIndex else { return }
+        dropdowns[selectedDropdownIndex].options.indices.forEach { index in
+            dropdowns[selectedDropdownIndex].options[index].isSelected = false
+        }
+    }
+    
+    func clearSelectedDropdown() {
+        guard let selectedDropdownIndex = selectedDropdownIndex else { return }
+        dropdowns[selectedDropdownIndex].isSelected = false
+    }
+    
+    private func currentUserId() -> AnyPublisher<UserId, Error> {
+        return self.userService.currentUser().flatMap { user -> AnyPublisher<UserId, Error> in
+            if let userId = user?.uid {
+                return Just(userId)
+                    .setFailureType(to: Error.self)
+                    .eraseToAnyPublisher()
+            } else {
+                return self.userService
+                    .signInAnonymously()
+                    .map{ $0.uid }
+                    .eraseToAnyPublisher()
+            }
+        }.eraseToAnyPublisher()
+    }
 }
 
 extension CreateViewModel {

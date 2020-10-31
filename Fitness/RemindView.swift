@@ -12,7 +12,7 @@ struct RemindView: View {
         VStack {
             Spacer()
             
-            DropdownView()
+//            DropdownView()
             
             Spacer()
             

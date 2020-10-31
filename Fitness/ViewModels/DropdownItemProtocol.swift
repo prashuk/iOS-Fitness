@@ -25,5 +25,5 @@ struct DropdownOption {
     }
     let type: DropdownOptionType
     let formatted: String
-    let isSelected: Bool
+    var isSelected: Bool
 }
