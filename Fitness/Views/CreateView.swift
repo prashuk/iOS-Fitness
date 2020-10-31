@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CreateView: View {
     
-    @StateObject private var viewModel = CreateViewModel()
+    @StateObject private var viewModel = CreateChallengeViewModel()
     
     var dropDownList: some View {
         Group {
