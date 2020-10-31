@@ -24,6 +24,7 @@
 		FEA23928254D095200501AAA /* ChallengeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA23927254D095200501AAA /* ChallengeService.swift */; };
 		FEA2392C254D351400501AAA /* FitnessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA2392B254D351400501AAA /* FitnessError.swift */; };
 		FEA23930254DCBB200501AAA /* AuthPublishers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA2392F254DCBB200501AAA /* AuthPublishers.swift */; };
+		FEA23933254DD1E700501AAA /* TabContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA23932254DD1E700501AAA /* TabContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		FEA23927254D095200501AAA /* ChallengeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeService.swift; sourceTree = "<group>"; };
 		FEA2392B254D351400501AAA /* FitnessError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessError.swift; sourceTree = "<group>"; };
 		FEA2392F254DCBB200501AAA /* AuthPublishers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPublishers.swift; sourceTree = "<group>"; };
+		FEA23932254DD1E700501AAA /* TabContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +105,8 @@
 				FEA2392E254DCB7300501AAA /* Publishers */,
 				FE919160254CF6AF00BCC176 /* Services */,
 				FE919165254D041900BCC176 /* Models */,
-				FE23974E2547D9AA003368CB /* ViewModels */,
 				FE919167254D043D00BCC176 /* Views */,
+				FE23974E2547D9AA003368CB /* ViewModels */,
 				FE105D5125479C1300BA1991 /* FitnessApp.swift */,
 				FE105D5A25479C1500BA1991 /* Info.plist */,
 				FE82A020254CEF4B00DEC45E /* GoogleService-Info.plist */,
@@ -173,6 +175,7 @@
 			children = (
 				FE105D5325479C1300BA1991 /* LandingView.swift */,
 				FE2397432547BE65003368CB /* CreateView.swift */,
+				FEA23932254DD1E700501AAA /* TabContainerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA23933254DD1E700501AAA /* TabContainerView.swift in Sources */,
 				FEA23930254DCBB200501AAA /* AuthPublishers.swift in Sources */,
 				FE2397502547D9BB003368CB /* CreateChallengeViewModel.swift in Sources */,
 				FE26A4A72547A0D7007A8954 /* PrimaryButtonStyle.swift in Sources */,
