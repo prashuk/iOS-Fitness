@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CreateView: View {
     
-    @State private var isActive = false
     @StateObject private var viewModel = CreateViewModel()
     
     var dropDownList: some View {
@@ -18,22 +17,36 @@ struct CreateView: View {
         }
     }
     
+    var actionSheet: ActionSheet {
+        ActionSheet(
+            title: Text("Select"),
+            buttons: viewModel.displayedOptions.indices.map { index in
+                let option = viewModel.displayedOptions[index]
+                return ActionSheet.Button.default(Text(option.formatted)) {
+                    viewModel.send(action: .selectOption(index: index))
+                }
+            }
+        )
+    }
+    
     var body: some View {
         ScrollView {
             VStack {
                 dropDownList
                 
                 Spacer()
-                NavigationLink(
-                    destination: RemindView(),
-                    isActive: $isActive) {
-                    Button(action: {
-                        isActive = true
-                    }) {
-                        Text("Next")
-                            .font(.system(size: 24, weight: .medium))
-                    }
+                
+                Button(action: {
+                    viewModel.send(action: .createChallenge)
+                }) {
+                    Text("Create")
+                        .font(.system(size: 24, weight: .medium))
                 }
+            }
+            .actionSheet(isPresented: Binding<Bool>(get: {
+                viewModel.hasSelectedDropdown
+            }, set: { _ in })) {
+                actionSheet
             }
             .navigationBarTitle("Create")
             .navigationBarBackButtonHidden(true)
