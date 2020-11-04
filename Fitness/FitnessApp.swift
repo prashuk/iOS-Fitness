@@ -38,6 +38,7 @@ class AppState: ObservableObject {
     private let userService: UserServiceProtocol
     
     init(userService: UserServiceProtocol = UserService()) {
+        try? Auth.auth().signOut()
         self.userService = userService
         userService
             .observeAuthChanges()
