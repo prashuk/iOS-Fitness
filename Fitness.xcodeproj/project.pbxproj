@@ -25,6 +25,9 @@
 		FEA2392C254D351400501AAA /* FitnessError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA2392B254D351400501AAA /* FitnessError.swift */; };
 		FEA23930254DCBB200501AAA /* AuthPublishers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA2392F254DCBB200501AAA /* AuthPublishers.swift */; };
 		FEA23933254DD1E700501AAA /* TabContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA23932254DD1E700501AAA /* TabContainerView.swift */; };
+		FEA23937254E800A00501AAA /* ChallengeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA23936254E800A00501AAA /* ChallengeListViewModel.swift */; };
+		FEA2393A254E801A00501AAA /* ChallengeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA23939254E801A00501AAA /* ChallengeListView.swift */; };
+		FEA2393D254E81AE00501AAA /* QuerySnapshotPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA2393C254E81AE00501AAA /* QuerySnapshotPublisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		FEA2392B254D351400501AAA /* FitnessError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessError.swift; sourceTree = "<group>"; };
 		FEA2392F254DCBB200501AAA /* AuthPublishers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPublishers.swift; sourceTree = "<group>"; };
 		FEA23932254DD1E700501AAA /* TabContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContainerView.swift; sourceTree = "<group>"; };
+		FEA23936254E800A00501AAA /* ChallengeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeListViewModel.swift; sourceTree = "<group>"; };
+		FEA23939254E801A00501AAA /* ChallengeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeListView.swift; sourceTree = "<group>"; };
+		FEA2393C254E81AE00501AAA /* QuerySnapshotPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuerySnapshotPublisher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,7 @@
 			children = (
 				FE23974F2547D9BB003368CB /* CreateChallengeViewModel.swift */,
 				FE2397532547DA88003368CB /* DropdownItemProtocol.swift */,
+				FEA23936254E800A00501AAA /* ChallengeListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -176,6 +183,7 @@
 				FE105D5325479C1300BA1991 /* LandingView.swift */,
 				FE2397432547BE65003368CB /* CreateView.swift */,
 				FEA23932254DD1E700501AAA /* TabContainerView.swift */,
+				FEA23939254E801A00501AAA /* ChallengeListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				FEA2392F254DCBB200501AAA /* AuthPublishers.swift */,
+				FEA2393C254E81AE00501AAA /* QuerySnapshotPublisher.swift */,
 			);
 			path = Publishers;
 			sourceTree = "<group>";
@@ -313,14 +322,17 @@
 				FEA23933254DD1E700501AAA /* TabContainerView.swift in Sources */,
 				FEA23930254DCBB200501AAA /* AuthPublishers.swift in Sources */,
 				FE2397502547D9BB003368CB /* CreateChallengeViewModel.swift in Sources */,
+				FEA2393D254E81AE00501AAA /* QuerySnapshotPublisher.swift in Sources */,
 				FE26A4A72547A0D7007A8954 /* PrimaryButtonStyle.swift in Sources */,
 				FE919162254CF6BF00BCC176 /* UserServices.swift in Sources */,
 				FE105D5425479C1300BA1991 /* LandingView.swift in Sources */,
+				FEA23937254E800A00501AAA /* ChallengeListViewModel.swift in Sources */,
 				FE2397542547DA88003368CB /* DropdownItemProtocol.swift in Sources */,
 				FE105D5225479C1300BA1991 /* FitnessApp.swift in Sources */,
 				FE26A4AA2547A254007A8954 /* Color+Extension.swift in Sources */,
 				FE2397442547BE65003368CB /* CreateView.swift in Sources */,
 				FEA23928254D095200501AAA /* ChallengeService.swift in Sources */,
+				FEA2393A254E801A00501AAA /* ChallengeListView.swift in Sources */,
 				FE2397472547CCFF003368CB /* DropdownView.swift in Sources */,
 				FEA23924254D06D500501AAA /* Challenge.swift in Sources */,
 				FEA2392C254D351400501AAA /* FitnessError.swift in Sources */,

@@ -38,7 +38,7 @@ struct LandingView: View {
                                     .font(.system(size: 24, weight: .semibold))
                                     .foregroundColor(.white)
                                 
-                                Text("Create a challeneg")
+                                Text("Create a challenge")
                                     .font(.system(size: 24, weight: .semibold))
                                     .foregroundColor(.white)
                                 
@@ -56,7 +56,7 @@ struct LandingView: View {
                         .aspectRatio(contentMode: .fill)
                         .overlay(Color.black.opacity(0.5))
                         .frame(width: proxy.size.width)
-                        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                        .edgesIgnoringSafeArea(.all)
                 )
                 
             }
@@ -67,8 +67,6 @@ struct LandingView: View {
 
 struct LandingView_Previews: PreviewProvider {
     static var previews: some View {
-        LandingView().previewDevice("iPhone 8")
         LandingView().previewDevice("iPhone 12 Pro")
-        LandingView().previewDevice("iPhone 12 Pro Max")
     }
 }
