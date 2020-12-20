@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum FitnessError: LocalizedError {
+enum IncrementError: LocalizedError {
     case auth(description: String)
     case `default`(description: String? = nil)
     

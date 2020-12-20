@@ -11,8 +11,9 @@ final class ChallengeListViewModel: ObservableObject {
     private var userService: UserServiceProtocol
     private var challengeService: ChallengeServiceProtocol
     
-    init(userService: UserServiceProtocol = UserService(),
-         challengeService: ChallengeServiceProtocol = ChallengeService()
+    init(
+        userService: UserServiceProtocol = UserService(),
+        challengeService: ChallengeServiceProtocol = ChallengeService()
     ) {
         self.userService = userService
         self.challengeService = challengeService
