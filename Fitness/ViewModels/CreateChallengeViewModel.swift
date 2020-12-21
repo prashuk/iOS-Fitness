@@ -18,7 +18,7 @@ final class CreateChallengeViewModel: ObservableObject {
     @Published var startAmountDropdown = ChallengePartViewModel(type: .startAmount)
     @Published var lengthDropdown = ChallengePartViewModel(type: .length)
     
-    @Published var error: FitnessError?
+    @Published var error: IncrementError?
     @Published var isLoading = false
     
     private let userService: UserServiceProtocol
@@ -38,7 +38,7 @@ final class CreateChallengeViewModel: ObservableObject {
         switch action {
         case .createChallenge:
             isLoading = true
-            currentUserId().flatMap { userId -> AnyPublisher<Void, FitnessError> in
+            currentUserId().flatMap { userId -> AnyPublisher<Void, IncrementError> in
                 return self.createChallenge(userId: userId)
             }.sink { completion in
                 self.isLoading = false
@@ -54,7 +54,7 @@ final class CreateChallengeViewModel: ObservableObject {
         }
     }
     
-    private func createChallenge(userId: UserId) -> AnyPublisher<Void, FitnessError> {
+    private func createChallenge(userId: UserId) -> AnyPublisher<Void, IncrementError> {
         guard let excercise = excerciseDropdown.text,
               let startAmount = startAmountDropdown.number,
               let increase = increaseDropdown.number,
@@ -74,11 +74,11 @@ final class CreateChallengeViewModel: ObservableObject {
         return challengeService.create(challenge).eraseToAnyPublisher()
     }
     
-    private func currentUserId() -> AnyPublisher<UserId, FitnessError> {
-        return self.userService.currentUser().flatMap { user -> AnyPublisher<UserId, FitnessError> in
+    private func currentUserId() -> AnyPublisher<UserId, IncrementError> {
+        return self.userService.currentUser().flatMap { user -> AnyPublisher<UserId, IncrementError> in
             if let userId = user?.uid {
                 return Just(userId)
-                    .setFailureType(to: FitnessError.self)
+                    .setFailureType(to: IncrementError.self)
                     .eraseToAnyPublisher()
             } else {
                 return self.userService

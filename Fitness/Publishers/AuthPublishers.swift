@@ -37,7 +37,5 @@ extension Publishers {
             subscriber = nil
             handler = nil
         }
-        
-        
     }
 }
