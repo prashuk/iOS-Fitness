@@ -18,6 +18,8 @@
 		FE2397542547DA88003368CB /* DropdownItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2397532547DA88003368CB /* DropdownItemProtocol.swift */; };
 		FE26A4A72547A0D7007A8954 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A4A62547A0D7007A8954 /* PrimaryButtonStyle.swift */; };
 		FE26A4AA2547A254007A8954 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A4A92547A254007A8954 /* Color+Extension.swift */; };
+		FE4C04F925A2720200AF7110 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4C04F825A2720200AF7110 /* SettingsView.swift */; };
+		FE754C0025A246AA009B0ABB /* ChallengeItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE754BFF25A246AA009B0ABB /* ChallengeItemViewModel.swift */; };
 		FE82A021254CEF4B00DEC45E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE82A020254CEF4B00DEC45E /* GoogleService-Info.plist */; };
 		FE919162254CF6BF00BCC176 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE919161254CF6BF00BCC176 /* UserServices.swift */; };
 		FEA23924254D06D500501AAA /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA23923254D06D500501AAA /* Challenge.swift */; };
@@ -46,6 +48,8 @@
 		FE2397532547DA88003368CB /* DropdownItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownItemProtocol.swift; sourceTree = "<group>"; };
 		FE26A4A62547A0D7007A8954 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		FE26A4A92547A254007A8954 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		FE4C04F825A2720200AF7110 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FE754BFF25A246AA009B0ABB /* ChallengeItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeItemViewModel.swift; sourceTree = "<group>"; };
 		FE82A020254CEF4B00DEC45E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FE919161254CF6BF00BCC176 /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
 		FEA23923254D06D500501AAA /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
@@ -110,13 +114,13 @@
 			children = (
 				FEA2392E254DCB7300501AAA /* Publishers */,
 				FE919160254CF6AF00BCC176 /* Services */,
+				FE105D5125479C1300BA1991 /* FitnessApp.swift */,
 				FE919165254D041900BCC176 /* Models */,
 				FE919167254D043D00BCC176 /* Views */,
 				FE23974E2547D9AA003368CB /* ViewModels */,
-				FE105D5125479C1300BA1991 /* FitnessApp.swift */,
+				FE105D5525479C1500BA1991 /* Assets.xcassets */,
 				FE105D5A25479C1500BA1991 /* Info.plist */,
 				FE82A020254CEF4B00DEC45E /* GoogleService-Info.plist */,
-				FE105D5525479C1500BA1991 /* Assets.xcassets */,
 				FEA2392A254D34FF00501AAA /* Errors */,
 				FE26A4AD2547A8B8007A8954 /* Extensions */,
 				FE26A4AC2547A8AD007A8954 /* Components */,
@@ -139,6 +143,7 @@
 				FE23974F2547D9BB003368CB /* CreateChallengeViewModel.swift */,
 				FE2397532547DA88003368CB /* DropdownItemProtocol.swift */,
 				FEA23936254E800A00501AAA /* ChallengeListViewModel.swift */,
+				FE754BFF25A246AA009B0ABB /* ChallengeItemViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 				FE2397432547BE65003368CB /* CreateView.swift */,
 				FEA23932254DD1E700501AAA /* TabContainerView.swift */,
 				FEA23939254E801A00501AAA /* ChallengeListView.swift */,
+				FE4C04F825A2720200AF7110 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -334,8 +340,10 @@
 				FEA23928254D095200501AAA /* ChallengeService.swift in Sources */,
 				FEA2393A254E801A00501AAA /* ChallengeListView.swift in Sources */,
 				FE2397472547CCFF003368CB /* DropdownView.swift in Sources */,
+				FE754C0025A246AA009B0ABB /* ChallengeItemViewModel.swift in Sources */,
 				FEA23924254D06D500501AAA /* Challenge.swift in Sources */,
 				FEA2392C254D351400501AAA /* IncrementError.swift in Sources */,
+				FE4C04F925A2720200AF7110 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

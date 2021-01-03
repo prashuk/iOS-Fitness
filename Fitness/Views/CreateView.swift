@@ -24,14 +24,13 @@ struct CreateView: View {
         ScrollView {
             VStack {
                 dropDownList
-                
                 Spacer()
-                
                 Button(action: {
                     viewModel.send(action: .createChallenge)
                 }) {
                     Text("Create")
                         .font(.system(size: 24, weight: .medium))
+                        .foregroundColor(.primary)
                 }
             }
         }

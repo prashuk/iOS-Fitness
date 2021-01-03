@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Challenge: Codable {
+struct Challenge: Codable, Hashable {
     let excercise: String
     let startAmount: Int
     let increase: Int
