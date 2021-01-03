@@ -11,6 +11,7 @@ import Firebase
 @main
 struct FitnessApp: App {
     
+    @AppStorage("isDarkMode") private var isDarkMode = false
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject private var appState = AppState()
     
@@ -18,6 +19,7 @@ struct FitnessApp: App {
         WindowGroup {
             if appState.isLoggedIn {
                 TabContainerView()
+                    .preferredColorScheme(isDarkMode ? .dark : .light)
             } else {
                 LandingView()
             }

@@ -19,6 +19,8 @@
 		FE26A4A72547A0D7007A8954 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A4A62547A0D7007A8954 /* PrimaryButtonStyle.swift */; };
 		FE26A4AA2547A254007A8954 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A4A92547A254007A8954 /* Color+Extension.swift */; };
 		FE4C04F925A2720200AF7110 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4C04F825A2720200AF7110 /* SettingsView.swift */; };
+		FE4C04FC25A2726A00AF7110 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4C04FB25A2726A00AF7110 /* SettingsViewModel.swift */; };
+		FE4C04FF25A2727500AF7110 /* SettingsItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4C04FE25A2727500AF7110 /* SettingsItemViewModel.swift */; };
 		FE754C0025A246AA009B0ABB /* ChallengeItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE754BFF25A246AA009B0ABB /* ChallengeItemViewModel.swift */; };
 		FE82A021254CEF4B00DEC45E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE82A020254CEF4B00DEC45E /* GoogleService-Info.plist */; };
 		FE919162254CF6BF00BCC176 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE919161254CF6BF00BCC176 /* UserServices.swift */; };
@@ -49,6 +51,8 @@
 		FE26A4A62547A0D7007A8954 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		FE26A4A92547A254007A8954 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		FE4C04F825A2720200AF7110 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FE4C04FB25A2726A00AF7110 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		FE4C04FE25A2727500AF7110 /* SettingsItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemViewModel.swift; sourceTree = "<group>"; };
 		FE754BFF25A246AA009B0ABB /* ChallengeItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeItemViewModel.swift; sourceTree = "<group>"; };
 		FE82A020254CEF4B00DEC45E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FE919161254CF6BF00BCC176 /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 				FE2397532547DA88003368CB /* DropdownItemProtocol.swift */,
 				FEA23936254E800A00501AAA /* ChallengeListViewModel.swift */,
 				FE754BFF25A246AA009B0ABB /* ChallengeItemViewModel.swift */,
+				FE4C04FB25A2726A00AF7110 /* SettingsViewModel.swift */,
+				FE4C04FE25A2727500AF7110 /* SettingsItemViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -340,7 +346,9 @@
 				FEA23928254D095200501AAA /* ChallengeService.swift in Sources */,
 				FEA2393A254E801A00501AAA /* ChallengeListView.swift in Sources */,
 				FE2397472547CCFF003368CB /* DropdownView.swift in Sources */,
+				FE4C04FC25A2726A00AF7110 /* SettingsViewModel.swift in Sources */,
 				FE754C0025A246AA009B0ABB /* ChallengeItemViewModel.swift in Sources */,
+				FE4C04FF25A2727500AF7110 /* SettingsItemViewModel.swift in Sources */,
 				FEA23924254D06D500501AAA /* Challenge.swift in Sources */,
 				FEA2392C254D351400501AAA /* IncrementError.swift in Sources */,
 				FE4C04F925A2720200AF7110 /* SettingsView.swift in Sources */,
@@ -476,6 +484,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Fitness/Preview Content\"";
 				DEVELOPMENT_TEAM = NJVB322UA6;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = arm64;
 				INFOPLIST_FILE = Fitness/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

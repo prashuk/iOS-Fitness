@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct DropdownView<T: DropdownItemProtocol>: View {
-    
     @Binding var viewModel: T
     
     var actionSheet: ActionSheet {
@@ -30,7 +29,6 @@ struct DropdownView<T: DropdownItemProtocol>: View {
                 Spacer()
             }
             .padding(.vertical, 10)
-            
             Button(action: {
                 viewModel.isSelected = true
             }) {

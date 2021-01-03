@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LandingView: View {
-    
     @State private var isActive = false
     
     var body: some View {
@@ -21,9 +20,7 @@ struct LandingView: View {
                     Text("Fitness")
                         .font(.system(size: 64, weight: .medium))
                         .foregroundColor(.white)
-                    
                     Spacer()
-                    
                     NavigationLink(
                         destination: CreateView(),
                         isActive: $isActive
@@ -33,15 +30,12 @@ struct LandingView: View {
                         }) {
                             HStack(spacing: 15) {
                                 Spacer()
-                                
                                 Image(systemName: "plus.circle")
                                     .font(.system(size: 24, weight: .semibold))
                                     .foregroundColor(.white)
-                                
                                 Text("Create a challenge")
                                     .font(.system(size: 24, weight: .semibold))
                                     .foregroundColor(.white)
-                                
                                 Spacer()
                             }
                         }

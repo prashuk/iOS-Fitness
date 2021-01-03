@@ -12,7 +12,6 @@ import Firebase
 typealias UserId = String
 
 final class CreateChallengeViewModel: ObservableObject {
-    
     @Published var excerciseDropdown = ChallengePartViewModel(type: .excercise)
     @Published var increaseDropdown = ChallengePartViewModel(type: .increase)
     @Published var startAmountDropdown = ChallengePartViewModel(type: .startAmount)

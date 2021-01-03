@@ -33,13 +33,14 @@ struct TabContainerView: View {
                 ChallengeListView()
             }
         case .settings:
-            Text("Settings")
+            NavigationView {
+                SettingsView()
+            }
         }
     }
 }
 
 final class TabContainerViewModel: ObservableObject {
-    
     @Published var selectedTab: TabItemViewModel.TabItemType = .challenegeList
     
     let tabItemViewModels = [
