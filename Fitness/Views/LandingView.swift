@@ -36,7 +36,7 @@ struct LandingView: View {
     }
     
     var alreadyButton: some View {
-        Button(viewModel.createButtonTitle) {
+        Button(viewModel.alreadyButtonTitle) {
             viewModel.loginSignupPush = true
         }.foregroundColor(.white)
     }
