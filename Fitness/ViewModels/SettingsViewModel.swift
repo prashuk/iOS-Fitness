@@ -11,6 +11,7 @@ import Combine
 final class SettingsViewModel: ObservableObject {
     @AppStorage("isDarkMode") private var isDarkMode = false
     @Published private(set) var itemViewModels: [SettingsItemViewModel] = []
+    @Published var loginSignupPush = false
     let title = "Settings"
     
     func item(at index: Int) -> SettingsItemViewModel {
@@ -19,6 +20,8 @@ final class SettingsViewModel: ObservableObject {
     
     func tapped(at index: Int) {
         switch itemViewModels[index].type {
+        case .account:
+            loginSignupPush = true
         case .mode:
             isDarkMode = !isDarkMode
             buildItems()

@@ -8,7 +8,45 @@
 import SwiftUI
 
 struct LandingView: View {
-    @State private var isActive = false
+    @StateObject private var viewModel = LandingViewModel()
+    
+    var title: some View {
+        Text(viewModel.title)
+            .font(.system(size: 64, weight: .medium))
+            .foregroundColor(.white)
+    }
+    
+    var createButton: some View {
+        Button(action: {
+            viewModel.createPush = true
+        }) {
+            HStack(spacing: 15) {
+                Spacer()
+                Image(systemName: viewModel.createButtonImageName)
+                    .font(.system(size: 24, weight: .semibold))
+                    .foregroundColor(.white)
+                Text(viewModel.createButtonTitle)
+                    .font(.system(size: 24, weight: .semibold))
+                    .foregroundColor(.white)
+                Spacer()
+            }
+        }
+        .padding(15)
+        .buttonStyle(PrimaryButtonStyle())
+    }
+    
+    var alreadyButton: some View {
+        Button(viewModel.createButtonTitle) {
+            viewModel.loginSignupPush = true
+        }.foregroundColor(.white)
+    }
+    
+    var backGroundImage: some View {
+        Image(viewModel.backgroundImage)
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .overlay(Color.black.opacity(0.5))
+    }
     
     var body: some View {
         NavigationView {
@@ -16,39 +54,18 @@ struct LandingView: View {
                 VStack {
                     Spacer()
                         .frame(height: proxy.size.height * 0.08)
-                    
-                    Text("Fitness")
-                        .font(.system(size: 64, weight: .medium))
-                        .foregroundColor(.white)
+                    title
                     Spacer()
-                    NavigationLink(
-                        destination: CreateView(),
-                        isActive: $isActive
-                    ) {
-                        Button(action: {
-                            isActive = true
-                        }) {
-                            HStack(spacing: 15) {
-                                Spacer()
-                                Image(systemName: "plus.circle")
-                                    .font(.system(size: 24, weight: .semibold))
-                                    .foregroundColor(.white)
-                                Text("Create a challenge")
-                                    .font(.system(size: 24, weight: .semibold))
-                                    .foregroundColor(.white)
-                                Spacer()
-                            }
-                        }
-                        .padding(15)
-                        .buttonStyle(PrimaryButtonStyle())
+                    NavigationLink(destination: CreateView(), isActive: $viewModel.createPush) {}
+                    createButton
+                    NavigationLink(destination: LoginSignupView(viewModel: .init(mode: .login)), isActive: $viewModel.loginSignupPush) {
                     }
+                    alreadyButton
                 }
+                .padding(.bottom, 15)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(
-                    Image("landing")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .overlay(Color.black.opacity(0.5))
+                    backGroundImage
                         .frame(width: proxy.size.width)
                         .edgesIgnoringSafeArea(.all)
                 )
@@ -56,11 +73,5 @@ struct LandingView: View {
             }
         }
         .accentColor(.primary)
-    }
-}
-
-struct LandingView_Previews: PreviewProvider {
-    static var previews: some View {
-        LandingView().previewDevice("iPhone 12 Pro")
     }
 }

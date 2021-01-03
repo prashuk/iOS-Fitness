@@ -18,7 +18,7 @@ struct ChallengeListView: View {
             } else if let error = viewModel.error {
                 VStack {
                     Text(error.localizedDescription)
-                    Button("Retry") {
+                    Button(viewModel.retry) {
                         viewModel.send(action: .retry)
                     }
                     .padding(10)
@@ -49,7 +49,7 @@ struct ChallengeListView: View {
         .navigationBarItems(trailing: Button {
             viewModel.send(action: .create)
         } label: {
-            Image(systemName: "plus.circle")
+            Image(systemName: viewModel.createImageName)
                 .imageScale(.large)
         })
         .navigationTitle(viewModel.title)
@@ -68,7 +68,7 @@ struct ChallengeItemView: View {
             Text(viewModel.title)
                 .font(.system(size: 24, weight: .bold))
             Spacer()
-            Image(systemName: "trash")
+            Image(systemName: viewModel.trashImageName)
         }
     }
     

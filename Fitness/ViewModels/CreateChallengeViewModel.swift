@@ -24,6 +24,10 @@ final class CreateChallengeViewModel: ObservableObject {
     private let challengeService: ChallengeServiceProtocol
     private var cancellables: [AnyCancellable] = []
     
+    let createTitle = "Create"
+    let errorTitle = "Error!"
+    let ok = "Ok"
+    
     enum Action {
         case createChallenge
     }

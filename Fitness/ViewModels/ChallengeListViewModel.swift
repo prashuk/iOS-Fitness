@@ -12,11 +12,15 @@ final class ChallengeListViewModel: ObservableObject {
     private var userService: UserServiceProtocol
     private var challengeService: ChallengeServiceProtocol
     private var cancellable: [AnyCancellable] = []
+    
     @Published private(set) var itemViewModel: [ChallengeItemViewModel] = []
     @Published private(set) var error: IncrementError?
     @Published private(set) var isLoading = false
     @Published var showCreateModal = false
+    
     let title = "Challenges"
+    let retry = "Retry"
+    let createImageName = "plus.circle"
     
     enum Action {
         case retry

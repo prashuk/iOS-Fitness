@@ -10,6 +10,8 @@ import Foundation
 struct ChallengeItemViewModel: Hashable {
     private let challenge: Challenge
     
+    let trashImageName = "trash"
+    
     var title: String {
         challenge.excercise.capitalized
     }

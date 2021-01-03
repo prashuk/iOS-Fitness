@@ -27,7 +27,7 @@ struct CreateView: View {
                 Button(action: {
                     viewModel.send(action: .createChallenge)
                 }) {
-                    Text("Create")
+                    Text(viewModel.createTitle)
                         .font(.system(size: 24, weight: .medium))
                         .foregroundColor(.primary)
                 }
@@ -45,14 +45,14 @@ struct CreateView: View {
         }
         .alert(isPresented: Binding<Bool>.constant($viewModel.error.wrappedValue != nil)) {
             Alert(
-                title: Text("Error!"),
+                title: Text(viewModel.errorTitle),
                 message: Text($viewModel.error.wrappedValue?.localizedDescription ?? ""),
-                dismissButton: .default(Text("Ok"), action: {
+                dismissButton: .default(Text(viewModel.ok), action: {
                     viewModel.error = nil
                 })
             )
         }
-        .navigationBarTitle("Create")
+        .navigationBarTitle(viewModel.createTitle)
         .navigationBarBackButtonHidden(true)
         .padding(.bottom, 15)
     }
