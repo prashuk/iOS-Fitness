@@ -13,16 +13,18 @@ struct LoginSignupView: View {
     var emailTextField: some View {
         TextField(viewModel.emailPlaceholder, text: $viewModel.emailText)
             .modifier(TextFieldCustomRoundedStyle())
+            .autocapitalization(.none)
     }
     
     var passwordTextField: some View {
         SecureField(viewModel.passwordPlaceholder, text: $viewModel.passwordText)
             .modifier(TextFieldCustomRoundedStyle())
+            .autocapitalization(.none)
     }
     
     var actionButton: some View {
         Button(viewModel.buttonTitle) {
-            // action
+            viewModel.tappedActionButton()
         }
         .padding()
         .frame(maxWidth: .infinity)
@@ -45,6 +47,7 @@ struct LoginSignupView: View {
             emailTextField
             passwordTextField
             actionButton
+            Spacer()
         }
         .padding()
     }
