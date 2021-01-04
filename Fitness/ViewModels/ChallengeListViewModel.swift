@@ -47,7 +47,7 @@ final class ChallengeListViewModel: ObservableObject {
     
     func observerChallenges() {
         isLoading = true
-        userService.currentUser()
+        userService.currentUserPublisher()
             .compactMap {
                 return $0?.uid
             }

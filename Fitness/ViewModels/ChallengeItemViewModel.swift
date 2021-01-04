@@ -17,14 +17,14 @@ struct ChallengeItemViewModel: Hashable {
     }
     
     private var daysFromStart: Int {
-        guard let daysFromStart = Calendar.current.dateComponents([.day], from: challenge.startDate, to: Date()).day else {
-            return 0
-        }
+        let startDate = Calendar.current.startOfDay(for: challenge.startDate)
+        let toDate = Calendar.current.startOfDay(for: Date())
+        guard let daysFromStart = Calendar.current.dateComponents([.day], from: startDate, to: toDate).day else { return 0 }
         return abs(daysFromStart)
     }
     
     private var isComplete: Bool {
-        daysFromStart - challenge.length > 0
+        daysFromStart - challenge.length >= 0
     }
     
     var statusText: String {

@@ -32,6 +32,8 @@ struct LoginSignupView: View {
         .background(Color(.systemPink))
         .cornerRadius(16)
         .padding()
+        .disabled(!viewModel.isValid)
+        .opacity(viewModel.isValid ? 1 : 0.4)
     }
     
     var body: some View {

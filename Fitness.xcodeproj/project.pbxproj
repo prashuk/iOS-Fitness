@@ -25,6 +25,7 @@
 		FE4C050A25A27F8C00AF7110 /* LoginSignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4C050925A27F8C00AF7110 /* LoginSignupView.swift */; };
 		FE4C050E25A2800000AF7110 /* LoginSignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4C050D25A2800000AF7110 /* LoginSignupViewModel.swift */; };
 		FE4C051125A2843A00AF7110 /* TextFieldCustomRoundedStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4C051025A2843A00AF7110 /* TextFieldCustomRoundedStyle.swift */; };
+		FE4C051425A2DFB400AF7110 /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4C051325A2DFB400AF7110 /* ProgressCircleView.swift */; };
 		FE754C0025A246AA009B0ABB /* ChallengeItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE754BFF25A246AA009B0ABB /* ChallengeItemViewModel.swift */; };
 		FE82A021254CEF4B00DEC45E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE82A020254CEF4B00DEC45E /* GoogleService-Info.plist */; };
 		FE919162254CF6BF00BCC176 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE919161254CF6BF00BCC176 /* UserServices.swift */; };
@@ -61,6 +62,7 @@
 		FE4C050925A27F8C00AF7110 /* LoginSignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupView.swift; sourceTree = "<group>"; };
 		FE4C050D25A2800000AF7110 /* LoginSignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewModel.swift; sourceTree = "<group>"; };
 		FE4C051025A2843A00AF7110 /* TextFieldCustomRoundedStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustomRoundedStyle.swift; sourceTree = "<group>"; };
+		FE4C051325A2DFB400AF7110 /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
 		FE754BFF25A246AA009B0ABB /* ChallengeItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeItemViewModel.swift; sourceTree = "<group>"; };
 		FE82A020254CEF4B00DEC45E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FE919161254CF6BF00BCC176 /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
@@ -135,7 +137,6 @@
 				FE82A020254CEF4B00DEC45E /* GoogleService-Info.plist */,
 				FEA2392A254D34FF00501AAA /* Errors */,
 				FE26A4AD2547A8B8007A8954 /* Extensions */,
-				FE26A4AC2547A8AD007A8954 /* Components */,
 				FE105D5725479C1500BA1991 /* Preview Content */,
 			);
 			path = Fitness;
@@ -170,6 +171,7 @@
 				FE2397462547CCFF003368CB /* DropdownView.swift */,
 				FE26A4A62547A0D7007A8954 /* PrimaryButtonStyle.swift */,
 				FE4C051025A2843A00AF7110 /* TextFieldCustomRoundedStyle.swift */,
+				FE4C051325A2DFB400AF7110 /* ProgressCircleView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -208,6 +210,7 @@
 				FEA23932254DD1E700501AAA /* TabContainerView.swift */,
 				FEA23939254E801A00501AAA /* ChallengeListView.swift */,
 				FE4C04F825A2720200AF7110 /* SettingsView.swift */,
+				FE26A4AC2547A8AD007A8954 /* Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				FE754C0025A246AA009B0ABB /* ChallengeItemViewModel.swift in Sources */,
 				FE4C04FF25A2727500AF7110 /* SettingsItemViewModel.swift in Sources */,
 				FEA23924254D06D500501AAA /* Challenge.swift in Sources */,
+				FE4C051425A2DFB400AF7110 /* ProgressCircleView.swift in Sources */,
 				FEA2392C254D351400501AAA /* IncrementError.swift in Sources */,
 				FE4C04F925A2720200AF7110 /* SettingsView.swift in Sources */,
 			);
