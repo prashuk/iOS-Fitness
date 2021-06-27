@@ -54,3 +54,10 @@ struct LoginSignupView: View {
         .padding()
     }
 }
+
+//struct LoginSignupViewPreview: PreviewProvider {
+//    @ObservedObject var viewModel: LoginSignupViewModel
+//    static var previews: some View {
+//        LoginSignupView(viewModel: viewModel)
+//    }
+//}

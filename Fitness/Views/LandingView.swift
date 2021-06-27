@@ -75,3 +75,9 @@ struct LandingView: View {
         .accentColor(.primary)
     }
 }
+
+struct LandingViewPreview: PreviewProvider {
+    static var previews: some View {
+        LandingView()
+    }
+}
